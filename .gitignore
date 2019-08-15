@@ -1,0 +1,8 @@
+# VS Code Editor
+.vscode
+
+# Next.JS
+.next
+
+# Dependency directories
+node_modules/
