@@ -1,15 +1,13 @@
-import Link from 'next/link';
-import Container from '@material-ui/core/Container';
+import Header from './components/header';
+import Body from './components/body';
 
-const Index = () => (
-  <div>
-    <Container maxWidth="sm">
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-      <p>React Prototyper</p>
-    </Container>
-  </div>
-);
+function Index() {
+  return(
+    <div>
+      <Header title="React Prototyper" />
+      <Body />
+    </div>
+    )
+  };
 
 export default Index;
