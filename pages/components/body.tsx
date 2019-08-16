@@ -15,12 +15,8 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-interface BodyProps {
-  styles?: string;
-}
-
-function Body (props: BodyProps) {
-  const classes = useStyles(props);
+function Body () {
+  const classes = useStyles({});
   
   return (
     <div className="root">
