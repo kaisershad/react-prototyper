@@ -22,9 +22,11 @@
   "dependencies": {
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.3.3",
     "next": "^9.0.3",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
     "@types/node": "^12.7.1",
