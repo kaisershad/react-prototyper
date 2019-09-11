@@ -1,5 +1,5 @@
-import Header from './components/header';
-import Body from './components/body';
+import Header from './components/header'
+import Body from './components/body'
 
 function Index() {
   return(
@@ -10,4 +10,4 @@ function Index() {
     )
   };
 
-export default Index;
+export default Index

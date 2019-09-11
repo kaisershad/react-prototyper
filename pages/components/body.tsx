@@ -1,5 +1,6 @@
-import { Grid, Paper, TextField } from '@material-ui/core';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'; 
+import { Grid, Paper, TextField } from '@material-ui/core'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import { CodeEditor } from './code-editor'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,15 +16,16 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: 'none'
     },
   }),
-);
+)
 
 function Body () {
-  const classes = useStyles({});
+  const classes = useStyles({})
   
   return (
     <div className="root">
       <Grid container>
         <Grid item xs={6}>
+          <CodeEditor />
           <TextField 
             margin="normal"
             variant="outlined"
@@ -40,4 +42,4 @@ function Body () {
   )
 }
 
-export default Body;
+export default Body
