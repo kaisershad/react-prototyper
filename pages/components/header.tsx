@@ -17,7 +17,7 @@ interface HeaderProps {
   title: string;
 }
 
-export default function Header(props: HeaderProps) {
+const Header = (props: HeaderProps) => {
   const classes = useStyles({})
 
   return (
@@ -33,3 +33,5 @@ export default function Header(props: HeaderProps) {
     </div>
   )
 }
+
+export default Header
