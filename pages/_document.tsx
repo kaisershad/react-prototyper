@@ -1,7 +1,7 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/styles';
-import theme from '../src/theme';
+import React from 'react'
+import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheets } from '@material-ui/styles'
+import theme from '../src/theme'
 
 class ReactPrototyperDocument extends Document {
   render() {
@@ -25,7 +25,7 @@ class ReactPrototyperDocument extends Document {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }
 
@@ -53,13 +53,13 @@ ReactPrototyperDocument.getInitialProps = async ctx => {
   // 4. page.render
 
   // Render app and page and get the context of the page with collected side effects.
-  const sheets = new ServerStyleSheets();
-  const originalRenderPage = ctx.renderPage;
+  const sheets = new ServerStyleSheets()
+  const originalRenderPage = ctx.renderPage
 
   ctx.renderPage = () =>
     originalRenderPage({
       enhanceApp: App => props => sheets.collect(<App {...props} />),
-    });
+    })
 
   const initialProps = await Document.getInitialProps(ctx);
 
@@ -72,7 +72,7 @@ ReactPrototyperDocument.getInitialProps = async ctx => {
         {sheets.getStyleElement()}
       </React.Fragment>,
     ],
-  };
-};
+  }
+}
 
-export default ReactPrototyperDocument;
+export default ReactPrototyperDocument

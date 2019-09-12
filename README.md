@@ -5,6 +5,7 @@ This Webapplication is builded with:
 - [TypeScript](https://www.typescriptlang.org/)
 - [MaterialUI](https://material-ui.com/)
 - [NextJS](https://nextjs.org/)
+- [MonacoEditor](https://github.com/microsoft/monaco-editor)
 
 ## Purpose
 

@@ -1,10 +1,11 @@
-import { Grid, Paper, TextField } from '@material-ui/core';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'; 
+import { Grid, Paper } from '@material-ui/core'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import dynamic from 'next/dynamic'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
+      flexGrow: 1
     },
     paper: {
       marginTop: 16,
@@ -15,22 +16,17 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: 'none'
     },
   }),
-);
+)
 
-function Body () {
-  const classes = useStyles({});
+const Body = () => {
+  const classes = useStyles({})
+  const CodeEditor = dynamic(() => import('./code-editor'), { ssr: false })
   
   return (
     <div className="root">
       <Grid container>
         <Grid item xs={6}>
-          <TextField 
-            margin="normal"
-            variant="outlined"
-            label="Code"
-            fullWidth
-            multiline
-          />
+          <CodeEditor />
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>preview</Paper>
@@ -40,4 +36,4 @@ function Body () {
   )
 }
 
-export default Body;
+export default Body

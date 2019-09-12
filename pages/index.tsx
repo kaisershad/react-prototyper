@@ -1,7 +1,7 @@
-import Header from './components/header';
-import Body from './components/body';
+import Header from './components/header'
+import Body from './components/body'
 
-function Index() {
+const Index = () => {
   return(
     <div>
       <Header title="React Prototyper" />
@@ -10,4 +10,4 @@ function Index() {
     )
   };
 
-export default Index;
+export default Index
